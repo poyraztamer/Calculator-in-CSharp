@@ -1,0 +1,154 @@
+﻿<Window x:Class="SimpleCalculatorCSharp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SimpleCalculatorCSharp"
+        mc:Ignorable="d"
+        KeyDown="Window_KeyDown"
+        WindowStartupLocation="CenterScreen"
+        Title="Simple Calculator" Height="600" Width="400">
+    <Grid Margin="13,25,13,6" Width="365" Height="550">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="White" Offset="0.877"/>
+                <GradientStop Color="#FFC6C6C6" Offset="0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Button x:Name="percentage" Content="%" FontSize="30" FontWeight="Bold" Margin="-270,-165,0,0" Width="75" Height="50" Click="percentage_Click" Background="#FFEBECED" BorderBrush="#FFBDB9B9" ClickMode="Press">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="ce" Content="CE" FontSize="30" FontWeight="Bold" Margin="-87,-165,0,0" Width="75" Height="50" Click="ce_Click" Background="#FFEBECED" BorderBrush="#FFBDB9B9" ClickMode="Press">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="c" Content="C" FontSize="30" FontWeight="Bold" Margin="93,-165,0,0" Width="75" Height="50" Click="c_Click" Background="#FFEBECED" BorderBrush="#FFBDB9B9" ClickMode="Press">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="back" Content="←" FontSize="30" FontWeight="Bold" Margin="280,168,0,332" Width="75" Height="50" HorizontalAlignment="Left" Click="back_Click" Background="#FFEBECED" BorderBrush="#FFBDB9B9" ClickMode="Press">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="inverse" Content="1/x" FontSize="30" FontWeight="Bold" Margin="-270,-45,0,0" Width="75" Height="50" Click="inverse_Click" Background="#FFEBECED" BorderBrush="#FFBDB9B9" ClickMode="Press">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="power" Content="x²" FontSize="30" FontWeight="Bold" Margin="-87,-45,0,0" Width="75" Height="50" Click="power_Click" Background="#FFEBECED" BorderBrush="#FFBDB9B9" ClickMode="Press">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="sroot" Content="√" FontSize="30" FontWeight="Bold" Margin="93,-45,0,0" Width="75" Height="50" Click="sroot_Click" Background="#FFEBECED" BorderBrush="#FFBDB9B9" ClickMode="Press">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="divide" Content="÷" FontSize="30" FontWeight="Bold" Margin="280,227,10,272" Width="75" Height="50" Click="Operators_Clicked" Background="#FFEBECED" BorderBrush="#FFBDB9B9" ClickMode="Press">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="seven" Content="7" FontSize="30" FontWeight="Bold" Margin="-270,75,0,0" Width="75" Height="50" Click="Button_Click" Background="White" ClickMode="Press">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="eight" Content="8" FontSize="30" FontWeight="Bold" Margin="-87,75,0,0" Width="75" Height="50" Click="Button_Click" Background="White" ClickMode="Press">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="nine" Content="9" FontSize="30" FontWeight="Bold" Margin="93,75,0,0" Width="75" Height="50" Click="Button_Click" Background="White" ClickMode="Press">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="multiply" Content="×" FontSize="30" FontWeight="Bold" Margin="280,288,10,212" Width="75" Height="50" Click="Operators_Clicked" Background="#FFEBECED" BorderBrush="#FFBDB9B9" ClickMode="Press">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="four" Content="4" FontSize="30" FontWeight="Bold" Margin="-270,195,0,0" Width="75" Height="50" Click="Button_Click" Background="White" ClickMode="Press">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="five" Content="5" FontSize="30" FontWeight="Bold" Margin="-87,195,0,0" Width="75" Height="50" Click="Button_Click" Background="White" ClickMode="Press">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="six" Content="6" FontSize="30" FontWeight="Bold" Margin="93,195,0,0" Width="75" Height="50" Click="Button_Click" Background="#FFFFFCFC" ClickMode="Press">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="minus" Content="-" FontSize="30" FontWeight="Bold" Margin="280,348,10,152" Width="75" Height="50" Click="Operators_Clicked" Background="#FFEBECED" BorderBrush="#FFBDB9B9" ClickMode="Press">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="one" Content="1" FontSize="30" FontWeight="Bold" Margin="-270,315,0,0" Width="75" Height="50" Click="Button_Click" Background="White" ClickMode="Press">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="two" Content="2" FontSize="30" FontWeight="Bold" Margin="-87,315,0,0" Width="75" Height="50" Click="Button_Click" Background="White" ClickMode="Press">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="three" Content="3" FontSize="30" FontWeight="Bold" Margin="93,315,0,0" Width="75" Height="50" Click="Button_Click" Background="White" ClickMode="Press">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="plus" Content="+"  FontSize="30" FontWeight="Bold" Margin="280,408,10,92" Width="75" Height="50" Click="Operators_Clicked" Background="#FFEBECED" BorderBrush="#FFBDB9B9" ClickMode="Press">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="plusminus" Content="∓ " FontSize="30" FontWeight="Bold" Margin="-270,440,0,0" Width="75" Height="50" Click="plusminus_Click" Background="White" ClickMode="Press">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="zero" Content="0" FontSize="30" FontWeight="Bold" Margin="-87,440,0,0" Width="75" Height="50" Click="Button_Click" Background="White" ClickMode="Press">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="dot" Content="," FontSize="30" FontWeight="Bold" Margin="93,440,0,0" Width="75" Height="50" Click="dot_Click" Background="White" ClickMode="Press">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="equals" Content="=" FontSize="30" FontWeight="Bold" Margin="280,470,10,30" Width="75" Height="50" Click="Equals_Click" Background="#FF5A5A5A" Foreground="#FFE2D9D9" ClickMode="Press">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Label x:Name="calcScreen" Content="0" HorizontalAlignment="Center" Margin="0,52,0,0" VerticalAlignment="Top" Width="344" Height="79" Background="#FFCBE0A2" FontFamily="Digital Readout ExpUpright" FontSize="40" Foreground="#FFF50000" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" IsEnabled="False" BorderBrush="#FFFF0101" FontWeight="Bold">
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
+        </Label>
+
+        <Label x:Name="lblresult" HorizontalAlignment="Left" Margin="192,57,0,0" VerticalAlignment="Top" Width="161" Height="27" Background="#FFCBE0A2" Foreground="#FFF50000" FontFamily="Digital Readout ExpUpright" HorizontalContentAlignment="Right" FontStretch="Normal" VerticalContentAlignment="Center" Padding="0,0,0,-6" FontSize="16"/>
+        <Label x:Name="lblbasic" Content="Basic" Margin="115,9,0,0" VerticalAlignment="Top" Height="43" Width="232" FontStyle="Italic" HorizontalContentAlignment="Right" FontSize="20" FontFamily="LcdD" HorizontalAlignment="Left" Foreground="Red"/>
+        <Label x:Name="lblOp" HorizontalAlignment="Left" Margin="10,52,0,0" VerticalAlignment="Top" Height="37" Width="130" Background="#FFCBE0A2" Foreground="#FFF50000" FontFamily="LcdD" FontSize="22"/>
+        <Button x:Name="btnInfo" Content="ⓘ" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="30" FontSize="22" BorderBrush="#FFC6C6C6" VerticalContentAlignment="Bottom" Background="#FFC6C6C6" Foreground="Red" GotMouseCapture="btnInfo_GotMouseCapture" LostMouseCapture="btnInfo_LostMouseCapture"/>
+        <Button x:Name="btnMS" Content="MS" HorizontalAlignment="Left" Margin="328,140,0,0" Height="22" Width="28" BorderBrush="#FFDDDDDD" VerticalAlignment="Top" Click="btnMemory_Click"/>
+        <Button x:Name="btnMMinus" Content="M-" HorizontalAlignment="Left" Margin="294,140,0,0" Height="22" Width="28" BorderBrush="#FFDDDDDD" VerticalAlignment="Top" Click="btnMemory_Click"/>
+        <Button x:Name="btnMMPlus" Content="M+" HorizontalAlignment="Left" Margin="260,140,0,0" Height="22" Width="28" BorderBrush="#FFDDDDDD" VerticalAlignment="Top" Click="btnMemory_Click"/>
+        <Button x:Name="btnMR" Content="MR" HorizontalAlignment="Left" Margin="227,140,0,0" Height="22" Width="28" BorderBrush="#FFDDDDDD" VerticalAlignment="Top" IsEnabled="False" Click="btnMemory_Click"/>
+        <Button x:Name="btnMC" Content="MC" HorizontalAlignment="Left" Margin="194,140,0,0" Height="22" Width="28" BorderBrush="#FFDDDDDD" VerticalAlignment="Top" IsEnabled="False" Click="btnMemory_Click"/>
+    </Grid>
+</Window>
